@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#15151c" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>Acesso reservado — Scrilax × Multiplix</title>
+    <link rel="icon" type="image/jpeg" href="./assets/multiplix-symbol.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <main class="login-shell">
+      <section class="login-intro">
+        <div class="logo-crop"><img src="./assets/multiplix-wordmark.png" alt="Multiplix" /></div>
+        <div>
+          <span>SCRILAX × MULTIPLIX</span>
+          <h1>Uma conversa<br />que continua.</h1>
+          <p>Este material é reservado e organiza os principais pontos da reunião de diagnóstico.</p>
+        </div>
+        <small>Conteúdo confidencial · Acesso individual</small>
+      </section>
+
+      <section class="login-panel" aria-labelledby="loginTitle">
+        <div class="symbol-wrap"><img src="./assets/multiplix-symbol.jpg" alt="" /></div>
+        <span class="eyebrow">ACESSO RESERVADO</span>
+        <h2 id="loginTitle">Entre para acessar o Raio-X.</h2>
+        <p>Use a senha compartilhada com você.</p>
+
+        <form id="loginForm" novalidate>
+          <label for="password">Senha</label>
+          <div class="password-field">
+            <input id="password" name="password" type="password" autocomplete="current-password" required autofocus />
+            <button id="togglePassword" type="button" aria-label="Mostrar senha">Mostrar</button>
+          </div>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+          <button class="submit-button" type="submit"><span>Acessar o Raio-X</span><i aria-hidden="true"></i></button>
+        </form>
+        <div class="security-note"><span></span> Sessão protegida e válida por sete dias neste navegador.</div>
+      </section>
+    </main>
+    <script src="./login.js"></script>
+  </body>
+</html>

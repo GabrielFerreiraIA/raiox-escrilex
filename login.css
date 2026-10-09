@@ -1,0 +1,35 @@
+:root { --ink:#15151c; --paper:#f5f4f8; --purple:#7140f6; --purple-dark:#5524d7; --line:#dedce5; --muted:#696875; --display:"Space Grotesk","Segoe UI",sans-serif; --body:"DM Sans","Segoe UI",sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; color: var(--ink); background: var(--paper); font: 16px/1.6 var(--body); }
+.login-shell { min-height: 100vh; display: grid; grid-template-columns: 1.05fr .95fr; }
+.login-intro { position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; padding: clamp(2rem,6vw,6rem); color: white; background: var(--purple); }
+.login-intro::after { content:"X"; position:absolute; right:-5rem; bottom:-9rem; color:transparent; -webkit-text-stroke:2px rgba(255,255,255,.18); font:600 34rem/.75 var(--display); letter-spacing:-.16em; pointer-events:none; }
+.logo-crop { position:relative; z-index:1; width:180px; height:52px; overflow:hidden; border-radius:10px; }
+.logo-crop img { position:absolute; width:180px; height:180px; left:0; top:50%; transform:translateY(-50%); object-fit:cover; }
+.login-intro > div:nth-child(2) { position:relative; z-index:1; max-width:660px; }
+.login-intro span { color:#ded4ff; font-size:.76rem; font-weight:700; letter-spacing:.16em; }
+.login-intro h1 { margin:1rem 0; font:600 clamp(3.8rem,7vw,7rem)/.92 var(--display); letter-spacing:-.075em; }
+.login-intro p { max-width:520px; color:#e8e2ff; font-size:1.05rem; }
+.login-intro small { position:relative; z-index:1; color:#d3c7ff; }
+.login-panel { width:min(100% - 40px,520px); margin:auto; padding:clamp(1.5rem,4vw,3rem); border:1px solid var(--line); border-radius:28px; background:white; box-shadow:0 28px 90px rgba(34,20,66,.12); }
+.symbol-wrap img { width:66px; height:66px; border-radius:16px; }
+.eyebrow { display:block; margin-top:2rem; color:var(--purple); font-size:.72rem; font-weight:700; letter-spacing:.14em; }
+.login-panel h2 { margin:.7rem 0 .4rem; font:600 clamp(2.2rem,4vw,3.5rem)/1.02 var(--display); letter-spacing:-.055em; }
+.login-panel > p { color:var(--muted); }
+form { margin-top:2rem; }
+label { display:block; margin-bottom:.5rem; color:var(--muted); font-size:.78rem; font-weight:700; }
+.password-field { display:grid; grid-template-columns:1fr auto; align-items:center; border:1px solid var(--line); border-radius:14px; background:#faf9fc; transition:border-color 180ms ease,box-shadow 180ms ease; }
+.password-field:focus-within { border-color:var(--purple); box-shadow:0 0 0 3px rgba(113,64,246,.12); }
+.password-field input { min-width:0; height:54px; padding:0 1rem; border:0; outline:0; background:transparent; font-size:1rem; }
+.password-field button { height:38px; margin-right:.45rem; padding:0 .7rem; border:0; border-radius:9px; color:var(--purple-dark); background:#eee9ff; cursor:pointer; font-size:.73rem; font-weight:700; }
+.form-message { min-height:1.5rem; margin:.6rem 0; color:#bd2c3b; font-size:.82rem; }
+.submit-button { width:100%; min-height:54px; display:flex; align-items:center; justify-content:center; gap:.7rem; border:0; border-radius:14px; color:white; background:linear-gradient(135deg,#8052ff,var(--purple-dark)); cursor:pointer; font-weight:700; box-shadow:0 14px 36px rgba(113,64,246,.22); }
+.submit-button:disabled { opacity:.65; cursor:wait; }
+.submit-button i { display:none; width:14px; height:14px; border:2px solid rgba(255,255,255,.4); border-top-color:white; border-radius:50%; animation:spin .7s linear infinite; }
+.submit-button.is-loading i { display:block; }
+.security-note { display:flex; align-items:center; gap:.55rem; margin-top:1.3rem; color:var(--muted); font-size:.75rem; }
+.security-note span { width:7px; height:7px; border-radius:50%; background:#57c989; box-shadow:0 0 0 4px rgba(87,201,137,.1); }
+button:focus-visible,input:focus-visible { outline:3px solid rgba(113,64,246,.3); outline-offset:3px; }
+@keyframes spin { to { transform:rotate(360deg); } }
+@media(max-width:800px){ .login-shell{grid-template-columns:1fr}.login-intro{min-height:42vh;padding:1.5rem}.login-intro h1{font-size:clamp(3rem,14vw,4.6rem)}.login-intro small{display:none}.login-intro::after{font-size:18rem;right:-2rem;bottom:-4rem}.login-panel{margin:-2rem auto 2rem;position:relative;z-index:2}.logo-crop{width:150px;height:46px}.logo-crop img{width:150px;height:150px} }
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
