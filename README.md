@@ -13,7 +13,7 @@ Resumo visual e interativo da reunião de diagnóstico. O conteúdo utiliza some
 
 A publicação já funciona sem nenhuma configuração adicional.
 
-**Senha padrão:** `escrilexcontabilidade123`
+**Senha padrão:** `escrilex123`
 
 O servidor valida a senha e cria uma sessão em cookie HttpOnly por sete dias. Como a senha padrão está definida em um repositório público, essa proteção deve ser usada somente como uma barreira simples de apresentação, não para informações sensíveis.
 
