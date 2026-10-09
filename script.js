@@ -59,7 +59,7 @@ const mapContent = {
     text: 'Ao contar que o vendedor já havia batido a meta anual em outubro, Murilo identificou a reunião mensal como espaço para começar a reconhecer publicamente esse resultado.',
   },
   operacao: {
-    title: 'A principal tensão da Scrilax não foi resolvida nesta conversa.',
+    title: 'A principal tensão da Escrilex Contabilidade não foi resolvida nesta conversa.',
     text: 'Murilo explicou que a operação percebe o novo cliente como fardo, enquanto a margem fica mais apertada. Maycon reconheceu que o próximo passo precisa explicar o “como” dentro do contexto da contabilidade.',
   },
 };

@@ -10,8 +10,8 @@ test('is ready to deploy with the agreed simple password', () => {
 
   try {
     const config = getAccessConfig();
-    assert.equal(DEFAULT_CLIENT_PASSWORD, 'scrilax123');
-    assert.equal(config.password, 'scrilax123');
+    assert.equal(DEFAULT_CLIENT_PASSWORD, 'escrilexcontabilidade123');
+    assert.equal(config.password, 'escrilexcontabilidade123');
     assert.ok(config.secret.length >= 24);
   } finally {
     if (previousPassword === undefined) delete process.env.CLIENT_PASSWORD;

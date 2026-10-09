@@ -1,4 +1,4 @@
-# Raio-X da conversa — Scrilax × Multiplix
+# Raio-X da conversa — Escrilex Contabilidade × Multiplix
 
 Resumo visual e interativo da reunião de diagnóstico. O conteúdo utiliza somente informações, exemplos e combinados registrados na transcrição. O projeto inclui uma proteção simples por senha executada no servidor da Vercel.
 
@@ -7,13 +7,13 @@ Resumo visual e interativo da reunião de diagnóstico. O conteúdo utiliza some
 - Não apresenta proposta comercial.
 - Não descreve produto ou escopo de trabalho.
 - Não transforma exemplos narrados em promessa de resultado.
-- Diferencia fatos da Scrilax, ideias apresentadas e pontos ainda em aberto.
+- Diferencia fatos da Escrilex Contabilidade, ideias apresentadas e pontos ainda em aberto.
 
 ## Proteção de acesso
 
 A publicação já funciona sem nenhuma configuração adicional.
 
-**Senha padrão:** `scrilax123`
+**Senha padrão:** `escrilexcontabilidade123`
 
 O servidor valida a senha e cria uma sessão em cookie HttpOnly por sete dias. Como a senha padrão está definida em um repositório público, essa proteção deve ser usada somente como uma barreira simples de apresentação, não para informações sensíveis.
 
@@ -47,5 +47,5 @@ O `vercel dev` é necessário para testar localmente o middleware e as funções
 - Navegação guiada entre os seis capítulos.
 - Progresso de leitura.
 - Pilares expansíveis, com opção de abrir ou recolher todos.
-- Mapa interativo que conecta a conversa ao momento da Scrilax.
+- Mapa interativo que conecta a conversa ao momento da Escrilex Contabilidade.
 - Exportação otimizada para PDF.
