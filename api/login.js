@@ -1,4 +1,5 @@
 import { createSessionCookie, safeNextPath, signSession, verifyPassword } from '../lib/auth.js';
+import { getAccessConfig } from '../lib/config.js';
 
 const json = (body, status = 200, headers = {}) => new Response(JSON.stringify(body), {
   status,
@@ -9,9 +10,7 @@ export default {
   async fetch(request) {
     if (request.method !== 'POST') return json({ ok: false, error: 'method_not_allowed' }, 405, { Allow: 'POST' });
 
-    const expectedPassword = process.env.CLIENT_PASSWORD;
-    const sessionSecret = process.env.SESSION_SECRET;
-    if (!expectedPassword || !sessionSecret) return json({ ok: false, error: 'not_configured' }, 503);
+    const { password: expectedPassword, secret: sessionSecret } = getAccessConfig();
 
     let payload;
     try {

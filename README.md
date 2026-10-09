@@ -1,6 +1,6 @@
 # Raio-X da conversa — Scrilax × Multiplix
 
-Resumo visual e interativo da reunião de diagnóstico. O conteúdo utiliza somente informações, exemplos e combinados registrados na transcrição. O projeto inclui uma proteção por senha executada no servidor da Vercel.
+Resumo visual e interativo da reunião de diagnóstico. O conteúdo utiliza somente informações, exemplos e combinados registrados na transcrição. O projeto inclui uma proteção simples por senha executada no servidor da Vercel.
 
 ## Escopo editorial
 
@@ -11,22 +11,23 @@ Resumo visual e interativo da reunião de diagnóstico. O conteúdo utiliza some
 
 ## Proteção de acesso
 
-A senha nunca é enviada no código do site nem armazenada no GitHub. O servidor compara o valor digitado com `CLIENT_PASSWORD` e cria uma sessão assinada em cookie HttpOnly por sete dias.
+A publicação já funciona sem nenhuma configuração adicional.
 
-Variáveis obrigatórias:
+**Senha padrão:** `scrilax123`
 
-- `CLIENT_PASSWORD`: senha compartilhada com o cliente.
-- `SESSION_SECRET`: segredo aleatório com no mínimo 32 caracteres.
+O servidor valida a senha e cria uma sessão em cookie HttpOnly por sete dias. Como a senha padrão está definida em um repositório público, essa proteção deve ser usada somente como uma barreira simples de apresentação, não para informações sensíveis.
 
-Se qualquer uma delas estiver ausente, o acesso permanece bloqueado e a tela informa que a configuração ainda não foi concluída.
+Se quiser alterar a senha futuramente, estas variáveis são opcionais:
+
+- `CLIENT_PASSWORD`: nova senha compartilhada com o cliente.
+- `SESSION_SECRET`: novo segredo aleatório com no mínimo 32 caracteres.
 
 ## Publicar pela integração GitHub → Vercel
 
 1. Na Vercel, escolha **Add New → Project**.
 2. Importe o repositório `GabrielFerreiraIA/raiox-escrilex`.
 3. Mantenha **Framework Preset: Other** e o diretório raiz como `.`.
-4. Em **Environment Variables**, cadastre `CLIENT_PASSWORD` e `SESSION_SECRET` para Production, Preview e Development.
-5. Clique em **Deploy**.
+4. Clique em **Deploy**. Não é necessário cadastrar variáveis.
 
 Cada novo push para a branch principal gera um novo deploy automaticamente.
 
